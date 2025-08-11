@@ -1,0 +1,681 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>3个月成长路径</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(84, 72, 49, 0.08); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="249e2992-c8e0-8061-99aa-c8fcff5b0df8" class="page sans"><header><h1 class="page-title">3个月成长路径</h1><p class="page-description"></p></header><div class="page-body"><h1 id="249e2992-c8e0-8032-8006-d42e44b22b62" class=""><strong>🚀 2025年《崩坏3》3个月最爽成长路径（25年8月最新版）</strong></h1><p id="249e2992-c8e0-805a-9021-dfdf02c6514a" class=""><strong>核心策略</strong>：</p><p id="249e2992-c8e0-80b0-b6dd-f40b4edce944" class="">✅ <strong>抽新不抽旧</strong>：2025年新角色（如「终焉之律者·终末」、「繁星·绘世」）碾压老角色，优先毕业</p><p id="249e2992-c8e0-80ef-a832-ffa9d7ce1c93" class="">✅ <strong>月卡+BP为王</strong>：稳定水晶来源，绝不浪费抽毒池</p><p id="249e2992-c8e0-8050-b5a3-d1a7ba692137" class="">✅ <strong>1主C+1辅助速成</strong>：3个月内深渊红莲保级，乐土2.75轻松通关</p><hr id="249e2992-c8e0-8098-9405-fe7f6093e96b"/><h2 id="249e2992-c8e0-809f-93cd-feb93d9bd431" class=""><strong>📅 阶段规划（2025年8~11月）</strong></h2><table id="249e2992-c8e0-8000-a24f-dcff16c6cba9" class="simple-table"><thead class="simple-table-header"><tr id="249e2992-c8e0-80e3-a3fa-c83232fb069a"><th id="vh~P" class="simple-table-header-color simple-table-header"><strong>阶段</strong></th><th id="~pFw" class="simple-table-header-color simple-table-header"><strong>核心目标</strong></th><th id="}ucO" class="simple-table-header-color simple-table-header"><strong>关键操作</strong></th><th id="|KnD" class="simple-table-header-color simple-table-header"><strong>预估花费</strong></th></tr></thead><tbody><tr id="249e2992-c8e0-80f1-8cf8-db461cc333e7"><td id="vh~P" class=""><strong>第1个月</strong></td><td id="~pFw" class="">获取 <strong>2025年最新T0主C+专武</strong></td><td id="}ucO" class="">抽「繁星·绘世」/「终焉·终末」+武器</td><td id="|KnD" class="">0~648元</td></tr><tr id="249e2992-c8e0-80e8-8df4-cf9ba1781aca"><td id="vh~P" class=""><strong>第2个月</strong></td><td id="~pFw" class="">补 <strong>2025年新辅助+圣痕</strong></td><td id="}ucO" class="">抽「虚数·观测者」/肝「织梦者」套</td><td id="|KnD" class="">68~198元</td></tr><tr id="249e2992-c8e0-80e6-a26e-de3683854105"><td id="vh~P" class=""><strong>第3个月</strong></td><td id="~pFw" class="">升阶SS/养第二属性队</td><td id="}ucO" class="">BP+月卡+精准补强</td><td id="|KnD" class="">98~328元</td></tr></tbody></table><hr id="249e2992-c8e0-80eb-ad85-da8d2d3f56bf"/><h2 id="249e2992-c8e0-80cc-ac21-ed1fbffdf62c" class=""><strong>🔥 第1个月：必抽2025年最新T0主C</strong></h2><h3 id="249e2992-c8e0-80e1-8cd2-f09d9faed22c" class=""><strong>当前版本（7.8）推荐角色</strong></h3><p id="249e2992-c8e0-807b-bab9-db0d90a78829" class=""><strong>1. 「繁星·绘世」（生物火伤）</strong></p><ul id="249e2992-c8e0-8016-b0f5-fc53da6a63d5" class="bulleted-list"><li style="list-style-type:disc">2025年新晋T0，深渊/乐土/战场通杀，对群对单均超模</li></ul><ul id="249e2992-c8e0-80f4-abc3-c9588a33e135" class="bulleted-list"><li style="list-style-type:disc"><strong>必抽专武「星轨编织」</strong>（提升40%独立易伤）</li></ul><p id="249e2992-c8e0-80b1-be86-d3ed0cc7338d" class=""><strong>2. 「终焉之律者·终末」（虚数雷伤）</strong></p><ul id="249e2992-c8e0-80c2-a16d-dae168619c52" class="bulleted-list"><li style="list-style-type:disc">2025年强化版终焉，SS阶解锁全队爆发模式</li></ul><ul id="249e2992-c8e0-802a-9fb1-c5064d9a8b25" class="bulleted-list"><li style="list-style-type:disc">专武「寂灭之钥Ⅱ」必备</li></ul><h3 id="249e2992-c8e0-808d-9093-e00a92060181" class=""><strong>抽取策略</strong></h3><ul id="249e2992-c8e0-80cc-b325-f01059eae3ec" class="bulleted-list"><li style="list-style-type:disc"><strong>扩充补给</strong>：100抽保底新S，建议存够 <strong>2.8万水晶</strong>（≈648元首充双倍）</li></ul><ul id="249e2992-c8e0-80e3-8c19-d5fed98c7e71" class="bulleted-list"><li style="list-style-type:disc"><strong>精准补给</strong>：50抽保底专武，非酋需备1.4万水晶</li></ul><ul id="249e2992-c8e0-80c9-a2d5-da0781d1b8ee" class="bulleted-list"><li style="list-style-type:disc"><strong>替代方案</strong>：若水晶不足，优先角色＞武器＞圣痕（用锻造「星焰」过渡）</li></ul><h3 id="249e2992-c8e0-8017-a273-c0847c835c94" class=""><strong>💰 预估花费</strong></h3><ul id="249e2992-c8e0-8000-a944-f7881d7334cf" class="bulleted-list"><li style="list-style-type:disc"><strong>欧皇</strong>：30抽角色+30抽武器 ≈ <strong>0元</strong>（靠活动白嫖）</li></ul><ul id="249e2992-c8e0-80b6-bb87-c167fbef621d" class="bulleted-list"><li style="list-style-type:disc"><strong>保底人</strong>：100抽+50抽 ≈ <strong>648元</strong>（首充双倍最划算）</li></ul><p id="249e2992-c8e0-8062-8d12-d3102bdaba76" class=""><strong>✅ 成果</strong>：1个毕业2025主C，深渊直接杀穿苦痛3~红莲！</p><hr id="249e2992-c8e0-8017-ad1c-e6e14bbd6f7b"/><h2 id="249e2992-c8e0-808b-aa9d-c4196d415342" class=""><strong>🛡️ 第2个月：补2025年新辅助+圣痕</strong></h2><h3 id="249e2992-c8e0-80f2-bc68-dc6b829c7a63" class=""><strong>必抽2025辅助</strong></h3><p id="249e2992-c8e0-80b7-8893-d31346e28ecf" class=""><strong>1. 「虚数·观测者」（SP角色）</strong></p><ul id="249e2992-c8e0-8057-96c4-df6d98121869" class="bulleted-list"><li style="list-style-type:disc">全队提供 <strong>30%全伤易伤+时空锁定</strong>，百搭任何主C</li></ul><ul id="249e2992-c8e0-80ab-b0e8-c7b17da5f885" class="bulleted-list"><li style="list-style-type:disc">可通过 <strong>活动免费获取</strong>（8月签到送50碎片）</li></ul><p id="249e2992-c8e0-8004-b7b4-e1239e73d69a" class=""><strong>2. 「织梦者」圣痕套装</strong></p><ul id="249e2992-c8e0-8090-aa4f-c54b3f70e405" class="bulleted-list"><li style="list-style-type:disc">2025年新通用辅助圣痕，下位替代「屠格涅夫」</li></ul><h3 id="249e2992-c8e0-8093-9dd2-e9ed4b7f1f0a" class=""><strong>养成策略</strong></h3><ul id="249e2992-c8e0-8015-ba37-e341714dc07f" class="bulleted-list"><li style="list-style-type:disc"><strong>白嫖优先</strong>：SP角色肝活动，圣痕用「织梦者（上）+屠格涅夫（中下）」过渡</li></ul><ul id="249e2992-c8e0-80bd-89bb-e4c065b34c89" class="bulleted-list"><li style="list-style-type:disc"><strong>付费加速</strong>：<ul id="249e2992-c8e0-8044-9b1f-ceb2d6d7af63" class="bulleted-list"><li style="list-style-type:circle"><strong>进阶凭证BP（68元）</strong>：拿「观测者」碎片+圣痕材料</li></ul><ul id="249e2992-c8e0-8033-a880-fa6cdaf6a011" class="bulleted-list"><li style="list-style-type:circle"><strong>精准补给</strong>：抽齐「织梦者」套约100抽（非必须）</li></ul></li></ul><h3 id="249e2992-c8e0-8024-9b69-cd1ae52a31d3" class=""><strong>💰 预估花费</strong></h3><ul id="249e2992-c8e0-8084-8428-ddb7c0205ff6" class="bulleted-list"><li style="list-style-type:disc"><strong>零氪</strong>：纯靠活动毕业SP角色+可肝圣痕</li></ul><ul id="249e2992-c8e0-80d4-844c-d899606b638e" class="bulleted-list"><li style="list-style-type:disc"><strong>微氪</strong>：BP 68元+月卡30元 = <strong>98元</strong>（加速成型）</li></ul><p id="249e2992-c8e0-801b-844a-d95c835a1422" class=""><strong>✅ 成果</strong>：主C+辅助成型，深渊红莲稳保级！</p><hr id="249e2992-c8e0-80d4-95e3-cea95a1d50e1"/><h2 id="249e2992-c8e0-8094-9f43-e80ded5cf301" class=""><strong>⚔️ 第3个月：升阶SS/养第二队</strong></h2><h3 id="249e2992-c8e0-804c-97b9-cf8d30c499e1" class=""><strong>目标</strong>：主C升SS 或 培养第二属性队</h3><p id="249e2992-c8e0-80a2-96be-cf04e7a186bc" class=""><strong>1. 升SS推荐</strong>：</p><ul id="249e2992-c8e0-8046-a6fb-d643a869e8c2" class="bulleted-list"><li style="list-style-type:disc">通过 <strong>战场宝库</strong>（每周免费）+ <strong>BP奖励</strong>（68元）加速</li></ul><ul id="249e2992-c8e0-8005-b37f-dc6f5c5b071a" class="bulleted-list"><li style="list-style-type:disc">SS阶解锁关键技能（如「繁星」的领域爆发）</li></ul><p id="249e2992-c8e0-809d-9692-ec5b50efc8da" class=""><strong>2. 第二队推荐</strong>：</p><ul id="249e2992-c8e0-80ff-a2b0-ce6f089554be" class="bulleted-list"><li style="list-style-type:disc"><strong>若主C为火伤</strong>：补物理队（如「死生之律者·复苏」）</li></ul><ul id="249e2992-c8e0-80a5-a8ba-edde43c370f2" class="bulleted-list"><li style="list-style-type:disc"><strong>若主C为雷伤</strong>：补冰伤队（如「真理之律者·极夜」）</li></ul><h3 id="249e2992-c8e0-8094-9eb7-f4236315fc91" class=""><strong>资源分配</strong></h3><ul id="249e2992-c8e0-8037-a8b5-d779d4136521" class="bulleted-list"><li style="list-style-type:disc"><strong>水晶</strong>：优先抽第二主C专武（非必须，可肝替代）</li></ul><ul id="249e2992-c8e0-8020-a827-fb3c14bf89d2" class="bulleted-list"><li style="list-style-type:disc"><strong>BP+月卡</strong>：稳定获取角色碎片（98元/月）</li></ul><h3 id="249e2992-c8e0-80a2-8499-cc8614c37383" class=""><strong>💰 预估花费</strong></h3><ul id="249e2992-c8e0-805a-8769-fef70536cb41" class="bulleted-list"><li style="list-style-type:disc"><strong>最低</strong>：BP 68元+月卡30元 = <strong>98元</strong></li></ul><ul id="249e2992-c8e0-8059-bf58-c9f762ae7f22" class="bulleted-list"><li style="list-style-type:disc"><strong>抽第二C</strong>：追加648元（视需求）</li></ul><p id="249e2992-c8e0-808e-8cb7-d9238eeb3810" class=""><strong>✅ 成果</strong>：双队成型，寂灭深渊/终极区战场也能打！</p><hr id="249e2992-c8e0-80c5-8d68-d80134b16f52"/><h2 id="249e2992-c8e0-80c6-9e55-ec015afb5695" class=""><strong>💵 2025年3个月总花费方案</strong></h2><table id="249e2992-c8e0-80d4-b596-fd08a40ab917" class="simple-table"><thead class="simple-table-header"><tr id="249e2992-c8e0-8076-bd04-efc2737d3132"><th id="Jjve" class="simple-table-header-color simple-table-header"><strong>氪度</strong></th><th id="_wS[" class="simple-table-header-color simple-table-header"><strong>总花费</strong></th><th id="=vGu" class="simple-table-header-color simple-table-header"><strong>毕业内容</strong></th><th id="rVeS" class="simple-table-header-color simple-table-header"><strong>游戏体验</strong></th></tr></thead><tbody><tr id="249e2992-c8e0-80c7-b94b-edced98bda17"><td id="Jjve" class=""><strong>零氪党</strong></td><td id="_wS[" class="">0元</td><td id="=vGu" class="">1个2025主C+专武（靠囤）</td><td id="rVeS" class="">红莲升降，乐土2.5轻松</td></tr><tr id="249e2992-c8e0-8039-91c7-cc4f59eae222"><td id="Jjve" class=""><strong>微氪党</strong></td><td id="_wS[" class="">196~846元</td><td id="=vGu" class="">1主C+专武+1辅助+SS</td><td id="rVeS" class="">红莲保级，战场3档</td></tr><tr id="249e2992-c8e0-8080-a9d4-e6dffc8af84b"><td id="Jjve" class=""><strong>中氪党</strong></td><td id="_wS[" class="">1000~2500元</td><td id="=vGu" class="">双属性T0队+SSS主C</td><td id="rVeS" class="">寂灭稳榜，竞速前10%</td></tr><tr id="249e2992-c8e0-80e5-b473-cbc9eb0e9858"><td id="Jjve" class=""><strong>重氪党</strong></td><td id="_wS[" class="">3000元+</td><td id="=vGu" class="">全图鉴+SSS毕业</td><td id="rVeS" class="">无限榜一，收藏制霸</td></tr></tbody></table><hr id="249e2992-c8e0-80db-9a41-fb6c35abc007"/><h2 id="249e2992-c8e0-80db-b785-f344edbfe57c" class=""><strong>🎯 2025年关键提醒</strong></h2><ol type="1" id="249e2992-c8e0-8039-b1ee-c788c4103f58" class="numbered-list" start="1"><li><strong>绝抽新不抽旧</strong>：2025年老角色（如真理/终焉初版）已退环境，新角色强度差2倍以上！</li></ol><ol type="1" id="249e2992-c8e0-806b-8655-d2e01ad740d2" class="numbered-list" start="2"><li><strong>8~9月活动必肝</strong>：周年庆预热（送100抽+自选S），白嫖党最佳冲刺期</li></ol><ol type="1" id="249e2992-c8e0-8072-a1cf-f34f5380658b" class="numbered-list" start="3"><li><strong>防坑指南</strong>：<ul id="249e2992-c8e0-805e-acf4-fcaa85dc3948" class="bulleted-list"><li style="list-style-type:disc">别碰「往世乐土·旧印」池（25年毒池）</li></ul><ul id="249e2992-c8e0-8087-aa58-f2e4645f83c3" class="bulleted-list"><li style="list-style-type:disc">圣痕优先抽 <strong>「织梦者」</strong>，通用性碾压老套装</li></ul></li></ol><p id="249e2992-c8e0-8041-9f89-ca1e0ae0c414" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
